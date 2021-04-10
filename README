@@ -14,4 +14,26 @@ This is a small toolbox written in C.
   can convert the number to BIN|OCT|DEC|HEX format.
 
   Type the command "ctool" for more usage information.
-  
+
+examples
+========
+The binary 11010 equals octal 32 equals decmial 26
+equals hexadecimal 1a.
+
+obiscr@ubuntu:~/projects/ctool$ ctool conv -h 1A
+[16]1A = [2]11010
+[16]1A = [8]32
+[16]1A = [10]26
+obiscr@ubuntu:~/projects/ctool$ ctool conv -b 11010
+[2]11010 = [8]32
+[2]11010 = [10]26
+[2]11010 = [16]1a
+obiscr@ubuntu:~/projects/ctool$ ctool conv -o 32
+[8]32 = [2]11010
+[8]32 = [10]26
+[8]32 = [16]1a
+obiscr@ubuntu:~/projects/ctool$ ctool conv -d 26
+[10]26 = [2]11010
+[10]26 = [8]32
+[10]26 = [16]1a
+obiscr@ubuntu:~/projects/ctool$
