@@ -2,3 +2,16 @@ ctool
 =====
 
 This is a small toolbox written in C.
+
+1.Installation
+  git clone https://github.com/obiscr/ctool.git
+  cd ctool
+  make
+  make install
+
+2.Usage
+  So far, there only have a "conv(ert)" tool which
+  can convert the number to BIN|OCT|DEC|HEX format.
+
+  Type the command "ctool" for more usage information.
+  
