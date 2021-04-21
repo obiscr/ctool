@@ -1,5 +1,6 @@
 #include "ctool.h"
 #include "conv.h"
+#include "base64.h"
 
 int main (int argc, char *argv[])
 {
@@ -40,6 +41,19 @@ void deal_args(int argc, char *argv[])
 			usage("Please specify the type <-b -o -d -h>\n");
 		}
 		return;
+	} else if (!strcmp("base64",argv[1])) {
+		unsigned char *buf = NULL;
+
+		if(!strcmp("-e",argv[2])){
+			buf = base64_encode(argv[3]);
+			printf("%s\n",buf);
+		} else if (!strcmp("-d",argv[2])) {
+			buf = base64_decode(argv[3]);
+			printf("%s\n",buf);
+		} else {
+			usage("Need encrypt or decrypt string!\n");
+		}
+		free(buf);
 	}
 
 }

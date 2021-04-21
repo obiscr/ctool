@@ -9,7 +9,7 @@ else ifeq ($(shell uname), Darwin)
 endif
 
 all:
-	$(CC) ctool.c conv.c -o $(TARGET) -lm
+	$(CC) ctool.c conv.c base64.c -o $(TARGET) -lm
 
 clean:
 	rm $(TARGET)
