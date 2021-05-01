@@ -14,14 +14,19 @@ void deal_args(int argc, char *argv[])
 	{
 		usage("CTools Version 1.0"
 				"\nUsage:"
-				"\n\tctools conv <type> <number>	--This command will "
+				"\nconv:"
+				"\n\tctool conv <type> <number>	--This command will "
 				"convert the number to BIN|OCT|DEC|HEX format."
 				"\n\te.g."
-				"\n\tctools conv -b 1001101000011101100001010	--binary "
+				"\n\tctool conv -b 1001101000011101100001010	--binary "
 				"format convert."
-				"\n\tctools conv -o 115035412	--octal format convert."
-				"\n\tctools conv -d 20200202	--decimal format convert."
-				"\n\tctools conv -h 1343b0a	--hexadecimal format convert.\n");
+				"\n\tctool conv -o 115035412	--octal format convert."
+				"\n\tctool conv -d 20200202	--decimal format convert."
+				"\n\tctool conv -h 1343b0a	--hexadecimal format convert."
+				"\nbase64:"
+				"\n\tctool base64 -e string  --base64 encode"
+				"\n\tctool base64 -d c3RyaW5n  --base64 decode"
+				);
 		return; 
 	}
 	
